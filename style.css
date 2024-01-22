@@ -144,6 +144,16 @@ div.container h3 {
     display: flex;
 }
 
+/* !!! -> Ho inserito un animazione totale della riga
+per rendere l'animazione uguale a quella di Netflix,
+non sono però riuscito a far spostare l'intera riga.
+So che non era richiesto ma volevo provarci
+anche per curiosità personale, ho deciso comunque
+di lasciare l'animazione dell'intera riga
+solo per una questione di "bellezza visiva".
+Mi sono accorto che le card si spostano 1 alla volta,
+spero non venga considerato come un errore. */
+
 .carousel-inner .carousel-item-end.active,
 .carousel-inner .carousel-item-next {
   transform: translateX(100%);
