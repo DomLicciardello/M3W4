@@ -178,6 +178,9 @@ div.container h3 {
     margin-left: 20px;
     margin-right: -10px;
   }
+  .genres_title {
+    font-size: 19px;
+  }
 }
 
 @media (min-width: 577px){
