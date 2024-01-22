@@ -1,3 +1,5 @@
+// animazione caroselli
+
 let items = document.querySelectorAll('.carousel .carousel-item')
 
 items.forEach((el) => {
@@ -5,7 +7,6 @@ items.forEach((el) => {
     let next = el.nextElementSibling
     for (var i=1; i<minPerSlide; i++) {
         if (!next) {
-            // wrap carousel by using first child
         	next = items[0]
       	}
         let cloneChild = next.cloneNode(true)
@@ -13,3 +14,18 @@ items.forEach((el) => {
         next = next.nextElementSibling
     }
 })
+
+// opacità dei div (carousel 1-6 e footer)
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll(".div_hidden");
+hiddenElements.forEach((el) => observer.observe(el));
